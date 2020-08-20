@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interior Consultant</title>
+	<meta charset="utf-8">
+	<meta name="description" content="interior consultant, interiors, home interiors, dev challenges">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+
+<script>
+	$('document').ready(function(){
+		$('#hide').click(function(){
+			if(!($('.container').is(':hidden') && $('footer').is(':hidden')))
+			{
+				$('.container').hide();
+				$('footer').hide();	
+			}
+			else{
+				$('.container').show();
+				$('footer').show();	
+			}
+			
+		});
+
+		$(window).resize(function(){
+			if($(window).width() > 1000){
+				if ($('.container').is(':hidden') && $('footer').is(':hidden')) {
+					$('.container').show();
+					$('footer').show();
+					$('.navbar-collapse').collapse('hide');
+				}
+			}
+
+		})
+		
+	});
+</script>
+
+<body>
+	
+	<!-- ====================== NAV ====================== -->
+
+
+	<!-- Start Nav -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-style">
+
+		<!-- Navbar Brand -->
+		<a href="#" class="navbar-brand">THIS INTERIOR</a>
+
+		<!-- Start Button -->
+		<button type="button" class="navbar-toggler" data-toggle="collapse" id="hide" data-target="#navbarContent" aria-controls="navbarContent" aria-label="Toggler" aria-expanded="false">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- End Button -->
+
+		<!-- Start Navbar Links -->
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav font-weight-bold ml-auto">
+				<li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#collection" class="nav-link">Collection</a></li>
+				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+			</ul>
+		</div>
+		<!-- End Navbar Links -->
+
+	</nav>
+	<!-- End Nav -->
+
+	<!-- Start Container -->
+	<div class="container">
+
+		<!-- Start Row -->
+		<div class="row">
+
+			<!-- Start First Col -->
+			<div class="col-lg-4">
+
+				<!-- Start Left Content -->
+				<div class="left-content">
+					<h1 class="title">Modern interior</h1>
+					<br/>
+					<p class="description">A full-Service residential & commerical interior design and staging company offering professional organizing & <br/> eco-services.</p>
+
+					<h5>Read more&emsp;<i class="fas fa-long-arrow-alt-right"></i></h5>
+				</div>
+				<!-- End Left Content -->
+			</div>
+			<!-- End First Col -->
+
+			<!-- Start Second Col -->
+			<div class="col-lg-8">
+
+				<!-- Start Right Content -->
+				<div class="right-content">
+					<img src="../images/photo1.png">	
+				</div>
+				<!-- End Right Content -->
+
+				<!-- Start Card -->
+				<div class="card">
+
+					<!-- Card Header -->
+					<div class="card-header d-inline-flex mt-2">
+						<img src="../images/photo2.png" class="card-img-top rounded-circle" id="card-img">
+						<ul>
+							<li><h6 class="card-title text-white">Aliza Webber</h6></li>
+							<li><p class="text-white">Interior designer</p></li>
+						</ul>
+					</div>
+
+					<!-- Card Body -->
+					<div class="card-body">
+						<h3 class="text-white">Designed in 2020 by <br/>Aliza Webber</h3>
+					</div>
+
+				</div>
+				<!-- End Card -->
+
+			</div>
+			<!-- End Second Col -->
+
+		</div>
+		<!-- End Row -->
+
+	</div>
+	<!-- End Container -->	
+	
+
+	<!-- Footer -->
+	<footer><p class="text-center text-white">Khurram Munir @ DevChallenges.io</p></footer>
+</body>
