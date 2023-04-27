@@ -22,15 +22,16 @@
 <script>
 	$('document').ready(function(){
 		$('#hide').click(function(){
-			if(!($('.container').is(':hidden') && $('footer').is(':hidden')))
-			{
-				$('.container').hide();
-				$('footer').hide();	
-			}
-			else{
-				$('.container').show();
-				$('footer').show();	
-			}
+// 			if(!($('.container').is(':hidden') && $('footer').is(':hidden')))
+// 			{
+// 				$('.container').hide();
+// 				$('footer').hide();	
+// 			}
+// 			else{
+// 				$('.container').show();
+// 				$('footer').show();	
+// 			}
+			$('.container, footer').toggle();
 			
 		});
 
