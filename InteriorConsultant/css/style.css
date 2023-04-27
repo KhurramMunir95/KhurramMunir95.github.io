@@ -87,6 +87,7 @@ ul li p{
 	.navbar-nav li{
 		text-align: center;
 		margin: 20px;
+		padding-left: 0;
 	}
 
 	nav.navbar{
