@@ -132,7 +132,7 @@ img {
 .btn-yellow {
     border: 1px solid #FFD24B;
     background-color: var(---golden); 
-    color: var(--dark-gray);
+    color: var(--dark-gray) !important;
 }
 
 .btn-yellow:hover {
