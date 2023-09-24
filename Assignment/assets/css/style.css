@@ -45,11 +45,11 @@ h1, h2, h3 {
     color: var(--black);
 }
 
-h1 {
+h2 {
     font-size: clamp(1.625rem, 3vw, 2.25rem);
 }
 
-h2 {
+h3 {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 
