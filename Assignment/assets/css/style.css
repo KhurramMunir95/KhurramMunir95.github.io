@@ -132,8 +132,11 @@ img {
 .btn-yellow {
     border: 1px solid #FFD24B;
     background-color: var(---golden); 
-    box-shadow: 0 10px 34px 0 #eac555;
     color: var(--dark-gray);
+}
+
+.btn-yellow:hover {
+    box-shadow: 0 10px 34px 0 #eac555;
 }
 
 .btn-purple {
@@ -143,6 +146,7 @@ img {
     box-shadow: 0 10px 34px #5380EA80;
     width: 200px;
 }
+
 
 /* Navigation */
 .navbar {
