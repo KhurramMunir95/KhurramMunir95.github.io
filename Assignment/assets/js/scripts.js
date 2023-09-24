@@ -4,7 +4,7 @@ $(function() {
         loop:true,
         margin:20,
         nav:true,
-        navText:["<img src='./assets/icons/prev.svg' />", "<img src='./assets/icons/next.svg' />"],
+        navText:["<img src='./assets/icons/prev.svg' alt='previous' />", "<img src='./assets/icons/next.svg' alt='next' />"],
         responsive:{
             0:{
                 items:1,
