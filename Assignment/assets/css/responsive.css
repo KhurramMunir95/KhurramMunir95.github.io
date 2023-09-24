@@ -1,6 +1,11 @@
 /* Mobile devices */
 @media screen and (max-width:767px) {
 
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
     section {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -79,6 +84,10 @@
     .form-container {
         padding: 20px 20px;
         margin-top: 10px;
+    }
+
+    .form-control {
+        padding: 10px;
     }
 
     /* Clients */
