@@ -143,10 +143,12 @@ img {
     border: 1px solid var(--cornflower-blue);
     background-color: var(--cornflower-blue);
     color: #fff;
-    box-shadow: 0 10px 34px #5380EA80;
     width: 200px;
 }
 
+.btn-purple:hover {
+    box-shadow: 0 10px 34px #5380EA80;
+}
 
 /* Navigation */
 .navbar {
