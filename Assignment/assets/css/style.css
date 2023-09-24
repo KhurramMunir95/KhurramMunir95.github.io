@@ -19,7 +19,7 @@
 /* Font */
 @font-face {
     font-family: inter;
-    src: url(../fonts/Inter/Inter-VariableFont.ttf);
+    src: url(/assets/fonts/Inter/Inter-VariableFont.ttf);
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 }
 
 .container{
-    max-width: 1320px;
+    max-width: 1225px;
     padding-right: 1em;
     padding-left: 1em;
     margin-right: auto;
@@ -149,7 +149,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0 2rem 0;
+    padding: 3.3rem 0 2rem 0;
 }
 
 .navbar-nav {
@@ -203,7 +203,7 @@ img {
 .banner .main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row-reverse;
 }
 
@@ -218,7 +218,6 @@ img {
     margin-bottom: -115px;
     position: relative;
     z-index: 99;
-    padding-left: 50px;
 }
 
 .media.user {
@@ -345,4 +344,8 @@ footer {
     align-items: center;
     padding: 2rem 0 2rem 0;
     border-top: 1px solid #9CA0FF;
+}
+
+.footer {
+    padding-bottom: 18px;
 }
