@@ -153,7 +153,7 @@ $(function() {
     // render products
     $.ajax({
         type: 'GET',
-        url: '../apis/products.json',
+        url: './apis/products.json',
         success:function(products) {
             renderProducts(products);
         },
