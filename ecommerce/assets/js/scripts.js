@@ -72,6 +72,7 @@ function addTocart() {
         </div>
         <div>`;
         $rightSidebar.append(cartMenu_HTML);
+        localStorage.setItem('cart', JSON.stringify(cart));
     });
 
     // calculate cart total
@@ -89,7 +90,7 @@ function increaseQuantity(btn) {
     const updatedPrice = quantity.val() * price;
     const updatedCart = cart.map(item => 
         {
-            return item.id == id ? {...item, price: '$'+updatedPrice+''} : item;
+            return item.id == id ? {...item, quantity: quantity.val(), price: '$'+updatedPrice+''} : item;
         }
     )
     cart = updatedCart;
@@ -109,7 +110,7 @@ function decreaseQuantity(btn){
     const updatedPrice = quantity.val() * price;
     const updatedCart = cart.map(item => 
         {
-            return item.id == id ? {...item, price: '$'+updatedPrice+''} : item;
+            return item.id == id ? {...item, quantity: quantity.val(), price: '$'+updatedPrice+''} : item;
         }
     )
     cart = updatedCart;
@@ -139,6 +140,9 @@ function decreaseQuantity(btn){
 
             // hide cart total
             $('.cart-total').addClass('d-none');
+            
+            // remove cart from local storage
+            localStorage.removeItem('cart');
         }
         $(quantity).val(1);
     }
@@ -150,12 +154,24 @@ function decreaseQuantity(btn){
 }
 
 $(function() {
+    if(localStorage.getItem('cart')) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        addTocart();
+        $('.count').removeClass('d-none');
+        $('.count').text(cart.length);
+    }
     // render products
     $.ajax({
         type: 'GET',
         url: './apis/products.json',
         success:function(products) {
             renderProducts(products);
+            cart.forEach(element => {
+                let item = $('#'+element.id);
+                item.find('.product-actions').removeClass('d-none');
+                item.find('.add-cart').addClass('d-none');
+                item.find('.quantity').val(element.quantity);
+            });
         },
         error:function(error) {
             console.log(error);
@@ -169,12 +185,14 @@ $(function() {
         const id = $card.attr('id');
         const title = $card.find('.title').text();
         const price = $card.find('.price').text();
+        const quantity = $card.find('.quantity').val();
         const imgSrc = $card.find('img').attr('src');
 
         const product = {
             id: id,
             title: title,
             price: price,
+            quantity: quantity,
             imgSrc: imgSrc
         }
 
