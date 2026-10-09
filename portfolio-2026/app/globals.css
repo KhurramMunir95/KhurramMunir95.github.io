@@ -1,0 +1,3 @@
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #030405; color: #f2f6fc; font-family: Arial, sans-serif; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
