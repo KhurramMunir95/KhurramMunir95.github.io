@@ -1,3 +1,386 @@
-html { scroll-behavior: smooth; }
-body { margin: 0; background: #030405; color: #f2f6fc; font-family: Arial, sans-serif; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Michroma&family=Titillium+Web:wght@600;700&display=swap');
+#khurram-interactive-2026 {
+  --ka-bg:#030405; --ka-surface:#0d1117; --ka-surface-2:#17202b; --ka-ink:#f2f6fc;
+  --ka-secondary:#c5cedc; --ka-muted:#a0aec0; --ka-line:#35404e; --ka-soft:#242e3b;
+  --ka-mint:#7ac8ff; --ka-teal:#79d4a4; --ka-silver:#e0e8f3; --ka-accent:#7ac8ff; --ka-red:#ff766f;
+  --ka-wash:rgba(69,157,246,.13); --ka-wash-2:rgba(108,196,255,.08); --ka-green-wash:rgba(49,138,87,.16); --ka-red-wash:rgba(212,56,51,.12);
+  --ka-shine:rgba(233,245,255,.09); --ka-art:#080c12; --ka-art-line:#46617c;
+  --ka-solid:#80caff; --ka-button-end:#4cabff; --ka-solid-ink:#041321; --ka-shadow:rgba(0,0,0,.32);
+  background:var(--ka-bg); color:var(--ka-ink); color-scheme:dark; width:100%;
+  font:400 14px/1.7 'DM Sans',Arial,sans-serif; text-align:left; -webkit-font-smoothing:antialiased;
+  overflow-wrap:break-word; isolation:isolate;
+}
+#khurram-interactive-2026[data-theme="light"] {
+  --ka-bg:#f3f6fa; --ka-surface:#fff; --ka-surface-2:#e9eff7; --ka-ink:#152135;
+  --ka-secondary:#35465d; --ka-muted:#51627a; --ka-line:#c6d1df; --ka-soft:#dce4ee;
+  --ka-mint:#175dac; --ka-teal:#196140; --ka-silver:#35465d; --ka-accent:#175dac; --ka-red:#b02d35;
+  --ka-wash:rgba(53,130,217,.08); --ka-wash-2:rgba(53,130,217,.05); --ka-green-wash:rgba(47,132,77,.08); --ka-red-wash:rgba(189,55,61,.07);
+  --ka-shine:rgba(255,255,255,.65); --ka-art:#f5f8fc; --ka-art-line:#a5b8ce;
+  --ka-solid:#1260d8; --ka-button-end:#1054c7; --ka-solid-ink:#fff; --ka-shadow:rgba(33,59,96,.08); color-scheme:light;
+}
+#khurram-interactive-2026 * {box-sizing:border-box;}
+#khurram-interactive-2026 :is(h1,h2,h3,h4,p,ul) {margin:0;}
+#khurram-interactive-2026 :is(h1,h2,h3,h4) {color:var(--ka-ink);}
+#khurram-interactive-2026 :is(button,a,summary) {font:inherit;}
+#khurram-interactive-2026 button {color:inherit;}
+#khurram-interactive-2026 a {color:inherit;text-decoration:none;}
+#khurram-interactive-2026 [hidden] {display:none!important;}
+#khurram-interactive-2026 .ka-shell {max-width:1180px;margin:auto;padding:0 32px;}
+#khurram-interactive-2026 .ka-kicker {font:400 11px/1.7 'Michroma',Arial,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-small {font-size:12px;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-header {display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;}
+#khurram-interactive-2026 .ka-brand {display:flex;align-items:center;gap:12px;flex:none;}
+#khurram-interactive-2026 .ka-mark {display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:linear-gradient(140deg,var(--ka-surface-2),var(--ka-surface));border:1px solid var(--ka-line);box-shadow:inset 0 1px 0 var(--ka-shine);font-weight:700;letter-spacing:-.7px;}
+#khurram-interactive-2026 .ka-brand-label {font-weight:600;font-size:13px;letter-spacing:.2px;}
+#khurram-interactive-2026 .ka-nav {display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-nav a {padding:8px 0;transition:color .2s;}
+#khurram-interactive-2026 .ka-nav a:hover {color:var(--ka-ink);}
+#khurram-interactive-2026 .ka-nav a[aria-current] {color:var(--ka-mint);box-shadow:inset 0 -1px 0 var(--ka-mint);}
+#khurram-interactive-2026 [id] {scroll-margin-top:24px;}
+#khurram-interactive-2026 .ka-theme {display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;min-width:82px;padding:7px 11px;border:1px solid var(--ka-line);border-radius:9px;background:var(--ka-surface);font-size:11px;}
+#khurram-interactive-2026 .ka-theme svg {width:14px;height:14px;}
+#khurram-interactive-2026 .ka-hero {position:relative;display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);gap:25px;align-items:center;border:1px solid var(--ka-line);border-radius:20px;padding:36px 35px;background:radial-gradient(ellipse at 98% 5%,var(--ka-wash),transparent 67%),linear-gradient(140deg,var(--ka-surface),var(--ka-art));box-shadow:inset 0 1px 0 var(--ka-shine);}
+#khurram-interactive-2026 .ka-hero:before {content:'';position:absolute;left:35px;right:35px;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--ka-mint),var(--ka-silver),transparent);opacity:.65;}
+#khurram-interactive-2026 .ka-hero h1 {font:600 36px/1.17 'Titillium Web',Arial,sans-serif;letter-spacing:-.65px;margin:10px 0 13px;}
+#khurram-interactive-2026 .ka-hero-lead {font-size:18px;line-height:1.55;max-width:455px;letter-spacing:-.4px;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-hero-lead strong {font-weight:600;color:var(--ka-ink);}
+#khurram-interactive-2026 .ka-intro {font-size:14px;line-height:1.8;color:var(--ka-secondary);max-width:450px;margin-top:14px;}
+#khurram-interactive-2026 .ka-actions {display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:23px;}
+#khurram-interactive-2026 .ka-action {display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:41px;padding:10px 15px;border:1px solid var(--ka-line);border-radius:9px;background:var(--ka-surface);font-size:12px;font-weight:600;transition:transform .2s,border-color .2s;}
+#khurram-interactive-2026 .ka-action svg {width:14px;height:14px;}
+#khurram-interactive-2026 .ka-action:hover {transform:translateY(-2px);border-color:var(--ka-accent);}
+#khurram-interactive-2026 .ka-primary {background:linear-gradient(135deg,var(--ka-solid),var(--ka-button-end));color:var(--ka-solid-ink);border-color:var(--ka-solid);box-shadow:0 3px 12px var(--ka-shadow);}
+#khurram-interactive-2026 .ka-location {display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:11px;color:var(--ka-muted);margin-top:17px;}
+#khurram-interactive-2026 .ka-location svg {width:12px;height:12px;}
+#khurram-interactive-2026 .ka-location .ka-separator {width:2px;height:2px;background:var(--ka-muted);border-radius:50%;margin:0 4px;}
+#khurram-interactive-2026 .ka-hero-art {position:relative;min-width:0;padding:24px 4px 22px 19px;}
+#khurram-interactive-2026 .ka-art-heading {display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11px;color:var(--ka-muted);margin-bottom:19px;}
+#khurram-interactive-2026 .ka-art-heading span:first-child {font-weight:600;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-layer {position:relative;display:flex;align-items:center;gap:14px;background:var(--ka-surface);border:1px solid var(--ka-art-line);border-radius:13px;padding:16px 17px;box-shadow:0 12px 26px var(--ka-shadow),inset 0 1px 0 var(--ka-shine);transition:transform .3s ease;}
+#khurram-interactive-2026 .ka-layer + .ka-layer {margin-top:10px;}
+#khurram-interactive-2026 .ka-layer-first {margin-right:28px;background:linear-gradient(110deg,var(--ka-wash-2),transparent),var(--ka-surface);}
+#khurram-interactive-2026 .ka-layer-middle {margin-left:14px;margin-right:14px;background:linear-gradient(110deg,var(--ka-wash),transparent),var(--ka-surface);}
+#khurram-interactive-2026 .ka-layer-last {margin-left:28px;}
+#khurram-interactive-2026 .ka-layer:hover {transform:translateX(-4px);}
+#khurram-interactive-2026 .ka-layer svg {width:20px;height:20px;flex:none;color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-layer-first svg {color:var(--ka-silver);}
+#khurram-interactive-2026 .ka-layer-last svg {color:var(--ka-teal);}
+#khurram-interactive-2026 .ka-layer-title {font-size:12px;font-weight:600;}
+#khurram-interactive-2026 .ka-layer-sub {font-size:11px;color:var(--ka-muted);margin-top:2px;}
+#khurram-interactive-2026 .ka-art-caption {font-size:11px;text-align:right;color:var(--ka-muted);margin-top:18px;}
+#khurram-interactive-2026 .ka-art-caption strong {font-size:16px;color:var(--ka-ink);font-weight:600;}
+#khurram-interactive-2026 .ka-scope {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px;}
+#khurram-interactive-2026 .ka-scope-item {display:flex;align-items:center;gap:11px;padding:17px 15px;background:var(--ka-surface);border:1px solid var(--ka-soft);border-radius:13px;}
+#khurram-interactive-2026 .ka-scope-item svg {width:17px;height:17px;color:var(--ka-secondary);flex:none;}
+#khurram-interactive-2026 .ka-scope-title {font-size:12px;font-weight:600;}
+#khurram-interactive-2026 .ka-scope-sub {font-size:11px;color:var(--ka-muted);margin-top:1px;}
+#khurram-interactive-2026 .ka-section {padding-top:46px;}
+#khurram-interactive-2026 .ka-section-top {display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px;}
+#khurram-interactive-2026 .ka-section-top h2 {font-size:23px;line-height:1.4;letter-spacing:-.75px;font-weight:600;margin-top:7px;}
+#khurram-interactive-2026 .ka-section-top>p {max-width:330px;font-size:12px;color:var(--ka-muted);line-height:1.85;}
+#khurram-interactive-2026 .ka-work-toolbar {display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;}
+#khurram-interactive-2026 .ka-filters {display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+#khurram-interactive-2026 .ka-filter {padding:8px 11px;font-size:11px;min-height:35px;background:transparent;border:1px solid var(--ka-soft);border-radius:8px;color:var(--ka-muted);transition:background .2s,border-color .2s;}
+#khurram-interactive-2026 .ka-filter:hover {border-color:var(--ka-line);color:var(--ka-ink);}
+#khurram-interactive-2026 .ka-filter[aria-pressed="true"] {background:var(--ka-surface-2);color:var(--ka-ink);border-color:var(--ka-line);}
+#khurram-interactive-2026 .ka-count {font-size:11px;color:var(--ka-muted);flex:none;}
+#khurram-interactive-2026 .ka-work-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start;}
+#khurram-interactive-2026 .ka-work {min-width:0;border:1px solid var(--ka-line);border-radius:15px;background:linear-gradient(155deg,var(--ka-surface),var(--ka-art));box-shadow:inset 0 1px 0 var(--ka-shine);transition:border-color .25s,transform .25s,box-shadow .25s;}
+#khurram-interactive-2026 .ka-work:hover {border-color:var(--ka-art-line);transform:translateY(-3px);}
+#khurram-interactive-2026 .ka-cover {position:relative;min-height:159px;border-radius:14px 14px 0 0;background:var(--ka-art);border-bottom:1px solid var(--ka-soft);padding:19px 23px;display:flex;flex-direction:column;justify-content:center;}
+#khurram-interactive-2026 .ka-cover-top {display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-cover svg {width:17px;height:17px;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-cover-enterprise {background:radial-gradient(ellipse at 20% 75%,var(--ka-wash),transparent 65%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-media {background:linear-gradient(135deg,var(--ka-wash-2),transparent 72%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-retail {background:radial-gradient(ellipse at 70% 90%,var(--ka-wash),transparent 70%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-web {background:radial-gradient(ellipse at 5% 45%,var(--ka-wash-2),transparent 75%),var(--ka-art);}
+#khurram-interactive-2026 .ka-wordmark {font-size:30px;letter-spacing:-1.5px;font-weight:600;line-height:1.15;color:var(--ka-ink);}
+#khurram-interactive-2026 .ka-wordmark span {color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-cover-sub {font-size:11px;color:var(--ka-muted);margin-top:10px;}
+#khurram-interactive-2026 .ka-cover-enterprise .ka-wordmark {margin-top:13px;}
+#khurram-interactive-2026 .ka-module-line {display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:14px;}
+#khurram-interactive-2026 .ka-module-line span {padding:4px 8px;border:1px solid var(--ka-art-line);border-radius:5px;font-size:11px;color:var(--ka-secondary);background:var(--ka-surface);}
+#khurram-interactive-2026 .ka-media-wordmark {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;}
+#khurram-interactive-2026 .ka-media-wordmark .ka-wordmark {font-size:27px;letter-spacing:-1px;}
+#khurram-interactive-2026 .ka-media-disc {width:46px;height:46px;border:1px solid var(--ka-art-line);border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--ka-wash-2),var(--ka-wash));flex:none;}
+#khurram-interactive-2026 .ka-media-disc svg {width:20px;height:20px;color:var(--ka-silver);}
+#khurram-interactive-2026 .ka-cover-retail .ka-wordmark,#khurram-interactive-2026 .ka-cover-web .ka-wordmark {font-size:27px;margin-top:16px;}
+#khurram-interactive-2026 .ka-cover-web .ka-wordmark span {color:var(--ka-silver);}
+#khurram-interactive-2026 .ka-cover-engineering {min-height:114px;background:linear-gradient(115deg,var(--ka-wash),transparent 65%),var(--ka-art);}
+#khurram-interactive-2026 .ka-engineering-visual {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px;}
+#khurram-interactive-2026 .ka-engineering-path {font:400 12px/1.8 'Michroma',Arial,sans-serif;color:var(--ka-secondary);letter-spacing:.2px;}
+#khurram-interactive-2026 .ka-engineering-path span {color:var(--ka-muted);font:400 13px/1.8 'DM Sans',sans-serif;padding:0 5px;}
+#khurram-interactive-2026 .ka-engineering-visual>svg {width:26px;height:26px;color:var(--ka-mint);flex:none;}
+#khurram-interactive-2026 .ka-work-content {padding:22px 23px 17px;}
+#khurram-interactive-2026 .ka-work-type {display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-work-type:before {content:'';width:4px;height:4px;border-radius:50%;background:var(--ka-mint);flex:none;}
+#khurram-interactive-2026 .ka-work h3 {font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.35px;margin-top:8px;}
+#khurram-interactive-2026 .ka-work-description {font-size:13px;color:var(--ka-secondary);line-height:1.85;margin-top:10px;}
+#khurram-interactive-2026 .ka-tags {display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;}
+#khurram-interactive-2026 .ka-tags span {font-size:11px;color:var(--ka-muted);padding:3px 7px;background:var(--ka-surface-2);border-radius:5px;border:1px solid var(--ka-soft);}
+#khurram-interactive-2026 .ka-work details {border-top:1px solid var(--ka-soft);margin-top:18px;}
+#khurram-interactive-2026 .ka-work summary {display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;min-height:40px;padding-top:8px;font-size:11px;font-weight:600;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-work summary::-webkit-details-marker {display:none;}
+#khurram-interactive-2026 .ka-work summary svg {width:14px;height:14px;transition:transform .2s;}
+#khurram-interactive-2026 .ka-work details[open] summary svg {transform:rotate(180deg);}
+#khurram-interactive-2026 .ka-contribution {font-size:12px;line-height:1.85;color:var(--ka-secondary);padding-top:8px;padding-bottom:5px;}
+#khurram-interactive-2026 .ka-contribution p+p {margin-top:9px;}
+#khurram-interactive-2026 .ka-contribution strong {color:var(--ka-ink);font-weight:600;}
+#khurram-interactive-2026 .ka-cover-public {min-height:171px;background:linear-gradient(130deg,var(--ka-wash),transparent 75%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-public .ka-wordmark {font-size:28px;letter-spacing:-1px;margin-top:17px;}
+#khurram-interactive-2026 .ka-cover-magfellow {background:radial-gradient(ellipse at 15% 85%,var(--ka-wash),transparent 73%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-wavetel {background:linear-gradient(155deg,var(--ka-wash-2),transparent 75%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-edraak {background:linear-gradient(45deg,var(--ka-wash),transparent 70%),var(--ka-art);}
+#khurram-interactive-2026 .ka-cover-address {display:flex;align-items:center;gap:7px;margin-top:13px;font-size:11px;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-cover-address svg {width:12px;height:12px;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-project-footer {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:9px 14px;margin-top:18px;padding-top:13px;border-top:1px solid var(--ka-soft);}
+#khurram-interactive-2026 .ka-project-role {font-size:11px;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-project-role strong {display:block;color:var(--ka-secondary);font-weight:500;}
+#khurram-interactive-2026 .ka-project-link {display:inline-flex;align-items:center;gap:7px;min-height:36px;font-size:11px;font-weight:600;color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-project-link svg {width:14px;height:14px;}
+#khurram-interactive-2026 .ka-project-link:hover {text-decoration:underline;text-underline-offset:5px;}
+#khurram-interactive-2026 .ka-project-name {font:600 11px/1.8 'DM Sans',Arial,sans-serif;color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-work-note {display:flex;align-items:start;gap:8px;font-size:11px;line-height:1.8;color:var(--ka-muted);margin-top:16px;}
+#khurram-interactive-2026 .ka-work-note svg {width:13px;height:13px;margin-top:3px;flex:none;}
+#khurram-interactive-2026 .ka-work-bottom {display:flex;justify-content:space-between;align-items:start;gap:25px;margin-top:16px;}
+#khurram-interactive-2026 .ka-work-bottom .ka-work-note {margin-top:0;max-width:620px;}
+#khurram-interactive-2026 .ka-work-bottom .ka-project-link {flex:none;padding:0 0 0 3px;min-height:30px;}
+#khurram-interactive-2026 .ka-depth {display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.45fr);gap:17px;}
+#khurram-interactive-2026 .ka-depth-menu {padding:8px;background:var(--ka-surface);border:1px solid var(--ka-line);border-radius:15px;display:flex;flex-direction:column;gap:5px;}
+#khurram-interactive-2026 .ka-depth-button {display:flex;align-items:center;text-align:left;gap:12px;width:100%;padding:13px 12px;background:transparent;border:1px solid transparent;border-radius:10px;transition:background .2s;}
+#khurram-interactive-2026 .ka-depth-button>svg {width:18px;height:18px;color:var(--ka-muted);flex:none;}
+#khurram-interactive-2026 .ka-depth-button[aria-pressed="true"] {background:var(--ka-surface-2);border-color:var(--ka-line);}
+#khurram-interactive-2026 .ka-depth-button[aria-pressed="true"]>svg {color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-depth-button strong {display:block;font-size:12px;font-weight:600;}
+#khurram-interactive-2026 .ka-depth-button small {display:block;font-size:11px;color:var(--ka-muted);line-height:1.6;margin-top:2px;}
+#khurram-interactive-2026 .ka-depth-button>span {min-width:0;}
+#khurram-interactive-2026 .ka-depth-panel {padding:25px 28px;border:1px solid var(--ka-line);border-radius:15px;background:radial-gradient(ellipse at 95% 0%,var(--ka-wash),transparent 70%),var(--ka-surface);}
+#khurram-interactive-2026 .ka-depth-title {font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1.5;}
+#khurram-interactive-2026 .ka-depth-description {font-size:12px;color:var(--ka-secondary);line-height:1.85;margin-top:9px;}
+#khurram-interactive-2026 .ka-flow {display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 0;border-bottom:1px solid var(--ka-soft);margin-top:8px;margin-bottom:13px;}
+#khurram-interactive-2026 .ka-flow-step {font-size:11px;min-width:0;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-flow>svg {width:14px;height:14px;color:var(--ka-muted);flex:none;}
+#khurram-interactive-2026 .ka-depth-list {list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 19px;}
+#khurram-interactive-2026 .ka-depth-list li {font-size:11px;line-height:1.8;color:var(--ka-secondary);padding-left:11px;position:relative;}
+#khurram-interactive-2026 .ka-depth-list li:before {content:'';width:3px;height:3px;border-radius:50%;background:var(--ka-mint);position:absolute;left:0;top:9px;}
+#khurram-interactive-2026 .ka-proof {font-size:11px;line-height:1.8;color:var(--ka-muted);margin-top:15px;}
+#khurram-interactive-2026 .ka-proof strong {color:var(--ka-mint);font-weight:600;}
+#khurram-interactive-2026 .ka-about-layout {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;}
+#khurram-interactive-2026 .ka-about-card {border:1px solid var(--ka-line);border-radius:17px;padding:27px 28px;background:var(--ka-surface);}
+#khurram-interactive-2026 .ka-about-card h3 {font-size:19px;line-height:1.45;font-weight:600;letter-spacing:-.5px;max-width:370px;}
+#khurram-interactive-2026 .ka-about-copy {font-size:12px;line-height:1.9;color:var(--ka-secondary);margin-top:14px;}
+#khurram-interactive-2026 .ka-about-copy p+p {margin-top:11px;}
+#khurram-interactive-2026 .ka-values {display:flex;gap:7px;flex-wrap:wrap;margin-top:18px;}
+#khurram-interactive-2026 .ka-values span {font-size:11px;border:1px solid var(--ka-line);padding:5px 8px;border-radius:7px;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-craft-cards {display:grid;gap:13px;}
+#khurram-interactive-2026 .ka-craft-card {border:1px solid var(--ka-line);border-radius:15px;background:var(--ka-surface);padding:20px 22px;}
+#khurram-interactive-2026 .ka-craft-card:first-child {background:linear-gradient(115deg,var(--ka-wash-2),transparent 75%),var(--ka-surface);}
+#khurram-interactive-2026 .ka-craft-title {display:flex;align-items:center;justify-content:space-between;gap:12px;}
+#khurram-interactive-2026 .ka-craft-title h3 {font-size:13px;font-weight:600;}
+#khurram-interactive-2026 .ka-craft-title>svg {width:17px;height:17px;color:var(--ka-silver);}
+#khurram-interactive-2026 .ka-craft-card p {font-size:12px;line-height:1.8;color:var(--ka-secondary);margin-top:8px;}
+#khurram-interactive-2026 .ka-craft-meta {font-size:11px;color:var(--ka-muted);margin-top:10px;}
+#khurram-interactive-2026 .ka-journey {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;}
+#khurram-interactive-2026 .ka-journey-step {position:relative;padding:21px 20px 19px;border:1px solid var(--ka-line);border-radius:14px;background:var(--ka-surface);}
+#khurram-interactive-2026 .ka-journey-step:before {content:'';position:absolute;left:20px;right:20px;top:-1px;height:1px;background:linear-gradient(90deg,var(--ka-mint),transparent);opacity:.55;}
+#khurram-interactive-2026 .ka-journey-year {font-size:11px;color:var(--ka-mint);font-weight:600;}
+#khurram-interactive-2026 .ka-journey-step h3 {font-size:14px;font-weight:600;margin-top:9px;}
+#khurram-interactive-2026 .ka-journey-step p {font-size:11px;line-height:1.8;color:var(--ka-secondary);margin-top:8px;}
+#khurram-interactive-2026 .ka-journey-company {font-size:11px;color:var(--ka-muted);margin-top:15px;line-height:1.8;}
+#khurram-interactive-2026 .ka-contact {margin-top:44px;border:1px solid var(--ka-line);border-radius:18px;padding:29px 31px;background:linear-gradient(115deg,var(--ka-wash),transparent 70%),var(--ka-surface);display:flex;align-items:center;justify-content:space-between;gap:24px;}
+#khurram-interactive-2026 .ka-contact h2 {font-size:23px;font-weight:600;line-height:1.4;letter-spacing:-.65px;margin-top:6px;}
+#khurram-interactive-2026 .ka-contact p {font-size:12px;color:var(--ka-secondary);margin-top:8px;max-width:400px;}
+#khurram-interactive-2026 .ka-contact .ka-actions {margin-top:0;flex:none;}
+#khurram-interactive-2026 .ka-footer {display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px;line-height:1.8;color:var(--ka-muted);padding:23px 0 27px;}
+#khurram-interactive-2026 .ka-footer a {text-decoration:underline;text-underline-offset:4px;}
+@media (max-width:860px) {
+  #khurram-interactive-2026 .ka-shell {padding:0 25px;}
+  #khurram-interactive-2026 .ka-header {padding-right:86px;gap:18px;}
+  #khurram-interactive-2026 .ka-nav {gap:13px;}
+  #khurram-interactive-2026 .ka-hero {padding:30px 26px;gap:15px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-hero h1 {font-size:32px;}
+  #khurram-interactive-2026 .ka-hero-lead {font-size:16px;}
+  #khurram-interactive-2026 .ka-hero-art {padding-left:0;}
+  #khurram-interactive-2026 .ka-layer {padding:14px 12px;gap:10px;}
+  #khurram-interactive-2026 .ka-layer-first {margin-right:18px;}
+  #khurram-interactive-2026 .ka-layer-middle {margin-left:9px;margin-right:9px;}
+  #khurram-interactive-2026 .ka-layer-last {margin-left:18px;}
+  #khurram-interactive-2026 .ka-scope {gap:9px;}
+  #khurram-interactive-2026 .ka-scope-item {padding:13px 10px;gap:8px;}
+  #khurram-interactive-2026 .ka-scope-title {font-size:11px;}
+  #khurram-interactive-2026 .ka-scope-sub {font-size:11px;}
+  #khurram-interactive-2026 .ka-about-layout {grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-contact {padding:26px;}
+  #khurram-interactive-2026 .ka-contact .ka-actions {flex-direction:column;align-items:stretch;}
+}
+@media (max-width:690px) {
+  #khurram-interactive-2026 .ka-shell {padding:0 20px;}
+  #khurram-interactive-2026 .ka-header {padding-right:0;flex-wrap:wrap;gap:15px;}
+  #khurram-interactive-2026 .ka-theme {margin-right:80px;}
+  #khurram-interactive-2026 .ka-nav {order:3;flex-basis:100%;justify-content:flex-start;gap:24px;}
+  #khurram-interactive-2026 .ka-hero {grid-template-columns:minmax(0,1fr);gap:10px;}
+  #khurram-interactive-2026 .ka-hero-art {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:15px 0 0;}
+  #khurram-interactive-2026 .ka-art-heading {grid-column:1/-1;margin-bottom:2px;}
+  #khurram-interactive-2026 .ka-layer,#khurram-interactive-2026 .ka-layer+.ka-layer {margin:0;display:block;padding:14px 12px;}
+  #khurram-interactive-2026 .ka-layer svg {margin-bottom:8px;}
+  #khurram-interactive-2026 .ka-layer-sub {font-size:11px;}
+  #khurram-interactive-2026 .ka-art-caption {grid-column:1/-1;margin-top:2px;}
+  #khurram-interactive-2026 .ka-scope {grid-template-columns:repeat(2,minmax(0,1fr));}
+  #khurram-interactive-2026 .ka-section {padding-top:36px;}
+  #khurram-interactive-2026 .ka-section-top {display:block;}
+  #khurram-interactive-2026 .ka-section-top>p {margin-top:11px;max-width:440px;}
+  #khurram-interactive-2026 .ka-work-grid {gap:14px;}
+  #khurram-interactive-2026 .ka-cover {padding:18px;min-height:159px;}
+  #khurram-interactive-2026 .ka-wordmark {font-size:26px;}
+  #khurram-interactive-2026 .ka-media-wordmark .ka-wordmark {font-size:23px;}
+  #khurram-interactive-2026 .ka-media-disc {width:34px;height:34px;}
+  #khurram-interactive-2026 .ka-work-content {padding:18px 17px 14px;}
+  #khurram-interactive-2026 .ka-work h3 {font-size:15px;}
+  #khurram-interactive-2026 .ka-cover-engineering {min-height:114px;}
+  #khurram-interactive-2026 .ka-engineering-path {font-size:11px;}
+  #khurram-interactive-2026 .ka-depth {grid-template-columns:minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-depth-menu {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+  #khurram-interactive-2026 .ka-about-layout {grid-template-columns:minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-craft-cards {grid-template-columns:repeat(2,minmax(0,1fr));}
+  #khurram-interactive-2026 .ka-journey {gap:10px;}
+  #khurram-interactive-2026 .ka-journey-step {padding:17px 14px;}
+  #khurram-interactive-2026 .ka-contact {display:block;}
+  #khurram-interactive-2026 .ka-contact .ka-actions {flex-direction:row;margin-top:20px;align-items:center;}
+}
+@media (max-width:490px) {
+  #khurram-interactive-2026 .ka-shell {padding:0 14px;}
+  #khurram-interactive-2026 .ka-header {gap:12px;padding-top:18px;padding-bottom:18px;}
+  #khurram-interactive-2026 .ka-brand {gap:8px;}
+  #khurram-interactive-2026 .ka-brand-label {font-size:12px;}
+  #khurram-interactive-2026 .ka-mark {width:31px;height:31px;}
+  #khurram-interactive-2026 .ka-theme {min-width:44px;padding:8px;}
+  #khurram-interactive-2026 .ka-theme-label {display:none;}
+  #khurram-interactive-2026 .ka-nav {gap:22px;font-size:11px;}
+  #khurram-interactive-2026 .ka-hero {padding:25px 21px;border-radius:18px;}
+  #khurram-interactive-2026 .ka-hero h1 {font-size:30px;line-height:1.25;max-width:250px;}
+  #khurram-interactive-2026 .ka-hero-lead {font-size:16px;}
+  #khurram-interactive-2026 .ka-kicker {font-size:11px;letter-spacing:.5px;}
+  #khurram-interactive-2026 .ka-hero-art {grid-template-columns:minmax(0,1fr);gap:8px;}
+  #khurram-interactive-2026 .ka-layer,#khurram-interactive-2026 .ka-layer+.ka-layer {display:flex;padding:12px 14px;gap:12px;}
+  #khurram-interactive-2026 .ka-layer svg {margin-bottom:0;width:18px;height:18px;}
+  #khurram-interactive-2026 .ka-layer-sub {font-size:11px;}
+  #khurram-interactive-2026 .ka-art-caption {text-align:left;font-size:11px;margin-top:5px;}
+  #khurram-interactive-2026 .ka-scope {gap:8px;}
+  #khurram-interactive-2026 .ka-scope-item {padding:13px 11px;}
+  #khurram-interactive-2026 .ka-scope-item svg {width:15px;height:15px;}
+  #khurram-interactive-2026 .ka-scope-title {font-size:11px;}
+  #khurram-interactive-2026 .ka-scope-sub {font-size:11px;}
+  #khurram-interactive-2026 .ka-section-top h2 {font-size:21px;}
+  #khurram-interactive-2026 .ka-work-toolbar {display:block;}
+  #khurram-interactive-2026 .ka-work-bottom {display:block;}
+  #khurram-interactive-2026 .ka-work-bottom .ka-project-link {margin-top:12px;}
+  #khurram-interactive-2026 .ka-count {margin-top:10px;}
+  #khurram-interactive-2026 .ka-filter {font-size:11px;padding:8px 9px;}
+  #khurram-interactive-2026 .ka-work-grid {grid-template-columns:minmax(0,1fr);gap:15px;}
+  #khurram-interactive-2026 .ka-cover {min-height:155px;padding:20px;}
+  #khurram-interactive-2026 .ka-cover-engineering {min-height:115px;}
+  #khurram-interactive-2026 .ka-work-content {padding:20px 20px 15px;}
+  #khurram-interactive-2026 .ka-work h3 {font-size:17px;}
+  #khurram-interactive-2026 .ka-engineering-path {font-size:11px;}
+  #khurram-interactive-2026 .ka-depth-menu {gap:3px;padding:6px;}
+  #khurram-interactive-2026 .ka-depth-button {padding:11px 8px;gap:8px;}
+  #khurram-interactive-2026 .ka-depth-button>svg {width:16px;height:16px;}
+  #khurram-interactive-2026 .ka-depth-button strong {font-size:11px;}
+  #khurram-interactive-2026 .ka-depth-button small {font-size:11px;}
+  #khurram-interactive-2026 .ka-depth-panel {padding:21px;}
+  #khurram-interactive-2026 .ka-depth-list {grid-template-columns:minmax(0,1fr);gap:7px;}
+  #khurram-interactive-2026 .ka-flow {gap:6px;flex-wrap:wrap;justify-content:flex-start;}
+  #khurram-interactive-2026 .ka-flow-step {font-size:11px;}
+  #khurram-interactive-2026 .ka-about-card {padding:23px;}
+  #khurram-interactive-2026 .ka-craft-cards {grid-template-columns:minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-journey {grid-template-columns:minmax(0,1fr);gap:13px;}
+  #khurram-interactive-2026 .ka-journey-step {padding:21px;}
+  #khurram-interactive-2026 .ka-contact {padding:25px 21px;border-radius:17px;}
+  #khurram-interactive-2026 .ka-contact h2 {font-size:21px;}
+  #khurram-interactive-2026 .ka-contact .ka-actions {gap:8px;}
+  #khurram-interactive-2026 .ka-footer {display:block;}
+  #khurram-interactive-2026 .ka-footer span:last-child {display:block;margin-top:7px;}
+}
+@media (pointer:coarse) {
+  #khurram-interactive-2026 .ka-theme,#khurram-interactive-2026 .ka-filter,#khurram-interactive-2026 .ka-action,#khurram-interactive-2026 .ka-nav a,#khurram-interactive-2026 .ka-work summary,#khurram-interactive-2026 .ka-project-link {min-height:44px;}
+  #khurram-interactive-2026 .ka-nav a {display:inline-flex;align-items:center;}
+  #khurram-interactive-2026 .ka-work-bottom .ka-project-link {min-height:44px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  #khurram-interactive-2026 *,#khurram-interactive-2026 *:before {transition:none!important;}
+  #khurram-interactive-2026 .ka-work:hover,#khurram-interactive-2026 .ka-layer:hover,#khurram-interactive-2026 .ka-action:hover {transform:none;}
+}
+#khurram-interactive-2026 .ka-mark {position:relative;width:40px;border-radius:8px;font-family:'Titillium Web',sans-serif;font-size:16px;}
+#khurram-interactive-2026 .ka-mark:after {content:'';position:absolute;bottom:5px;left:9px;right:9px;height:2px;background:var(--ka-red);}
+#khurram-interactive-2026 .ka-kicker {color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-layer-first {border-color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-layer-middle {border-color:var(--ka-teal);background:linear-gradient(110deg,var(--ka-green-wash),transparent),var(--ka-surface);}
+#khurram-interactive-2026 .ka-layer-last {border-color:var(--ka-red);background:linear-gradient(110deg,var(--ka-red-wash),transparent),var(--ka-surface);}
+#khurram-interactive-2026 .ka-section-top h2 {font-size:17px;}
+#khurram-interactive-2026 .ka-featured {grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);}
+#khurram-interactive-2026 .ka-case-cover {padding:26px;border-right:1px solid var(--ka-line);background:radial-gradient(ellipse at 15% 80%,var(--ka-wash),transparent 75%),var(--ka-art);border-radius:12px 0 0 12px;}
+#khurram-interactive-2026 .ka-case-evidence {background:radial-gradient(ellipse at 15% 80%,var(--ka-green-wash),transparent 75%),var(--ka-art);}
+#khurram-interactive-2026 .ka-case-cover h3 {font:400 19px/1.65 'Michroma',sans-serif;margin:16px 0;}
+#khurram-interactive-2026 .ka-case-cover h3 span {color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-case-evidence h3 span {color:var(--ka-teal);}
+#khurram-interactive-2026 .ka-case-controls {display:flex;gap:6px;flex-wrap:wrap;margin:16px 0;}
+#khurram-interactive-2026 .ka-case-mode {font-size:12px;padding:7px 9px;border:1px solid var(--ka-line);border-radius:6px;background:var(--ka-surface);color:var(--ka-secondary);cursor:pointer;}
+#khurram-interactive-2026 .ka-case-mode[aria-pressed="true"] {color:var(--ka-solid-ink);background:var(--ka-solid);border-color:var(--ka-solid);}
+#khurram-interactive-2026 .ka-case-stage {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0;}
+#khurram-interactive-2026 .ka-case-stage span {font-size:12px;text-align:center;min-width:0;padding:14px 8px;border:1px solid var(--ka-art-line);border-radius:7px;color:var(--ka-secondary);background:var(--ka-surface);}
+#khurram-interactive-2026 .ka-case-note {font-size:13px;line-height:1.8;color:var(--ka-secondary);min-height:72px;}
+#khurram-interactive-2026 .ka-case-caption {font-size:12px;color:var(--ka-muted);padding-top:13px;margin-top:14px;border-top:1px solid var(--ka-soft);}
+#khurram-interactive-2026 .ka-featured .ka-work-content {padding:26px;}
+#khurram-interactive-2026 .ka-featured .ka-work-content h3 {font-size:18px;}
+#khurram-interactive-2026 .ka-featured .ka-work-description {font-size:14px;line-height:1.8;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-career {list-style:none;margin:0;padding:0;border:1px solid var(--ka-line);border-radius:14px;overflow:hidden;background:var(--ka-surface);}
+#khurram-interactive-2026 .ka-career-item {display:grid;grid-template-columns:190px minmax(0,1fr);gap:26px;padding:26px;}
+#khurram-interactive-2026 .ka-career-item+.ka-career-item {border-top:1px solid var(--ka-line);}
+#khurram-interactive-2026 .ka-career-date {font-size:13px;line-height:1.7;color:var(--ka-mint);}
+#khurram-interactive-2026 .ka-career-date small {display:block;margin-top:7px;font-size:12px;color:var(--ka-muted);}
+#khurram-interactive-2026 .ka-career-content h3 {font-size:18px;font-weight:600;}
+#khurram-interactive-2026 .ka-career-role {font-size:14px;color:var(--ka-teal);margin:3px 0 10px;}
+#khurram-interactive-2026 .ka-career-copy {font-size:14px;line-height:1.8;color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-career-highlight {font-size:13px;line-height:1.8;margin-top:12px;padding:12px 14px;border-left:2px solid var(--ka-teal);background:var(--ka-green-wash);color:var(--ka-secondary);}
+#khurram-interactive-2026 .ka-career-tech {font-size:12px;color:var(--ka-muted);margin-top:13px;}
+#khurram-interactive-2026 .ka-contact-email {display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;color:var(--ka-mint);text-decoration:underline;text-underline-offset:4px;margin-top:15px;}
+#khurram-interactive-2026 .ka-contact-email svg {width:16px;height:16px;}
+#khurram-interactive-2026 .ka-back-top {position:fixed;right:clamp(16px,3vw,32px);bottom:max(22px,env(safe-area-inset-bottom));z-index:30;display:grid;place-items:center;width:50px;height:50px;border:1px solid var(--ka-art-line);border-radius:14px;color:var(--ka-mint);background:var(--ka-surface);box-shadow:0 8px 30px var(--ka-shadow),inset 0 1px 0 var(--ka-shine);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s,visibility .25s,border-color .25s;cursor:pointer;}
+#khurram-interactive-2026 .ka-back-top.is-visible {opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);}
+#khurram-interactive-2026 .ka-back-top:hover {border-color:var(--ka-mint);box-shadow:0 8px 30px var(--ka-shadow),0 0 18px var(--ka-wash);}
+#khurram-interactive-2026 .ka-up-glyph {display:flex;animation:ka-chevron-rise 1.8s ease-in-out infinite;}
+#khurram-interactive-2026 .ka-up-glyph svg {width:24px;height:24px;}
+#khurram-interactive-2026 .ka-footer {padding-right:76px;}
+@keyframes ka-chevron-rise {0%,100% {transform:translateY(2px);opacity:.7;}50% {transform:translateY(-3px);opacity:1;}}
+@media (max-width:820px) {
+  #khurram-interactive-2026 .ka-featured {grid-template-columns:minmax(0,1fr);}
+  #khurram-interactive-2026 .ka-case-cover {border-right:0;border-bottom:1px solid var(--ka-line);border-radius:12px 12px 0 0;}
+}
+@media (max-width:690px) {
+  #khurram-interactive-2026 .ka-theme {margin-right:0;}
+  #khurram-interactive-2026 .ka-career-item {grid-template-columns:minmax(0,1fr);gap:10px;}
+  #khurram-interactive-2026 .ka-case-note {min-height:0;}
+}
+@media (max-width:490px) {
+  #khurram-interactive-2026 .ka-career-item,#khurram-interactive-2026 .ka-case-cover,#khurram-interactive-2026 .ka-featured .ka-work-content {padding:21px;}
+  #khurram-interactive-2026 .ka-brand-label {font-size:12px;}
+  #khurram-interactive-2026 .ka-back-top {width:46px;height:46px;bottom:18px;}
+  #khurram-interactive-2026 .ka-footer {padding-right:0;padding-bottom:82px;}
+}
+@media (pointer:coarse) {
+  #khurram-interactive-2026 .ka-case-mode,#khurram-interactive-2026 .ka-contact-email {min-height:44px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  #khurram-interactive-2026 .ka-up-glyph {animation:none;}
+  #khurram-interactive-2026 .ka-back-top {transition:none;}
+}
+
+
+    html {scroll-behavior:smooth;}
+    body {margin:0;background:#030405;}
+    body[data-theme="light"] {background:#f3f6fa;}
+    button,a,summary {-webkit-tap-highlight-color:transparent;}
+    button,summary {cursor:pointer;}
+    @media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto;}}
+  
